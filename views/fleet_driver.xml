@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="fleet_driver_list" model="ir.ui.view">
+        <field name="name">fleet_driver_list</field>
+        <field name="model">fleet.driver</field>
+        <field name="type">tree</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <tree string="Driver List">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_fleet_driver_form" model="ir.ui.view">
+            <field name="name">fleet.driver.form</field>
+            <field name="model">fleet.driver</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <form string="Driver">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" string="Name" ></label>
+                            <h1>
+                                <field name="name" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_id" />
+                            </group>
+                            <group>
+                                <field name="employee_id" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+</odoo>

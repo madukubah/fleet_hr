@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'Sale Mining',
+    'name': 'Fleet HR',
     'version': '1.0',
     'author': 'Technoindo.com',
-    'category': 'Sales Management',
+    'category': 'Fleet HR Management',
     'depends': [
-        'sale_contract',
-        'shipping',
-        'sale_qaqc',
+        'fleet',
+        'hr',
     ],
     'data': [
         'views/menu.xml',
-        'views/qaqc_coa.xml',
+        "views/fleet_driver.xml",
     ],
     'qweb': [
         # 'static/src/xml/cashback_templates.xml',
