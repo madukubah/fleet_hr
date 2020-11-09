@@ -9,6 +9,12 @@ class FleetDriver(models.Model):
 	employee_id	= fields.Many2one('hr.employee', string='Employee', required=True )
 
 	_sql_constraints = [
-		('cek_unik_name','UNIQUE(partner_id)','Driver Must be Unique'),
-		('cek_unik_name','UNIQUE(employee_id)','Employee Must be Unique')
+		('cek_unik_partner','UNIQUE(partner_id)','Driver Must be Unique'),
+		('cek_unik_employee','UNIQUE(employee_id)','Employee Must be Unique')
 	]
+
+	@api.onchange('partner_id')	
+	def _change_partner_id(self):
+		for record in self:
+			record.name = record.partner_id.name
+
