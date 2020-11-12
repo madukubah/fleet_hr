@@ -12,6 +12,8 @@
     'data': [
         'views/menu.xml',
         "views/fleet_driver.xml",
+
+        "security/ir.model.access.csv",
     ],
     'qweb': [
         # 'static/src/xml/cashback_templates.xml',
